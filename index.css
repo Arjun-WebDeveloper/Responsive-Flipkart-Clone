@@ -1,18 +1,26 @@
+/* =======================
+   Global Styles
+======================= */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f1f2f4;
+  background-color: #f1f2f4; /* Light grey background */
 }
 
+/* =======================
+   Header Section
+======================= */
 header {
   background-color: #ffffff;
   color: #fff;
   padding: 0.4rem 0;
 }
+
 .header_logo {
-  width: 5rem;
+  width: 5rem; /* Logo container width */
 }
+
 .header_logo img {
   width: 100%;
   height: 100%;
@@ -20,15 +28,18 @@ header {
   margin-top: 0.5rem;
 }
 
+/* Search bar styling */
 .search {
   background-color: #f0f5ff;
   border: none;
 }
 
+/* Remove border glow on input focus */
 input:focus {
   outline: none;
 }
 
+/* Wrapper for header: logo, search, navigation */
 .header_wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -39,6 +50,7 @@ input:focus {
   padding: 0 5rem;
 }
 
+/* Search input styling */
 .header_search input {
   padding: 0.2rem;
   border: none;
@@ -46,24 +58,27 @@ input:focus {
   color: #f0f5ff;
 }
 
+/* Search button styling */
 .header_search button {
   padding: 0.1rem 1rem;
-  background-color: #ff9f00;
+  background-color: #ff9f00; /* Flipkart yellow */
   color: #fff;
   border: none;
   border-radius: 0.5em;
   cursor: pointer;
 }
 
+/* Navigation buttons (Login, Cart) */
 .header_nav ul li button {
   padding: 0.1rem 1rem;
-  background-color: #2a55e5;
+  background-color: #2a55e5; /* Flipkart blue */
   color: #fff;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
 }
 
+/* Navigation layout */
 .header_nav ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -80,9 +95,12 @@ input:focus {
   margin-right: 1rem;
 }
 
+/* =======================
+   Categories (Item List)
+======================= */
 .item-list {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr); /* 9 categories */
   background-color: #ffffff;
   place-content: center;
   place-items: center;
@@ -98,10 +116,15 @@ input:focus {
   align-items: center;
 }
 
+/* Divider spacing */
 .breaker {
   margin-top: 1.5rem;
 }
 
+/* =======================
+   Banners Section
+======================= */
+/* Mid-banner with brand logos */
 .mid-banner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -116,14 +139,20 @@ input:focus {
   height: 100%;
 }
 
+/* Discount banner */
 .discount-banner {
   margin: 0 auto;
   width: 95vw;
   height: 10rem;
 }
+
 .discount-banner img {
   max-width: 100%;
 }
+
+/* =======================
+   Lower Banner (Top Deals)
+======================= */
 .lower-banner {
   display: flex;
   flex-direction: column;
@@ -133,6 +162,7 @@ input:focus {
   margin: 0 auto;
 }
 
+/* Deals grid container */
 .con {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -144,6 +174,7 @@ input:focus {
   background-color: #ffffff;
 }
 
+/* Each deal item */
 .lower-banner-ad {
   width: 100%;
   height: 100%;
@@ -158,9 +189,13 @@ input:focus {
   height: 70%;
   margin-bottom: 0.5rem;
 }
+
+/* =======================
+   Footer Section
+======================= */
 footer {
-  background-color: #212121;
-  color: #5f6d6d;
+  background-color: #212121; /* Dark grey background */
+  color: #5f6d6d; /* Light grey text */
   padding: 0.5rem 0;
   margin-top: 4rem;
 }
@@ -173,6 +208,7 @@ footer {
   margin: 0 auto;
 }
 
+/* Footer headings */
 .footer-section h4 {
   font-size: 1rem;
   font-weight: bold;
@@ -189,6 +225,7 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* Footer links */
 .footer-section ul li a {
   color: #fff;
   text-decoration: none;
@@ -199,29 +236,40 @@ footer {
   text-decoration: underline;
 }
 
+/* Bottom copyright */
 .footer-bottom {
   text-align: center;
   font-size: 0.8em;
   color: #fff;
 }
+
+/* =======================
+   Responsive Design
+======================= */
+
+/* Small screens: below 520px */
 @media screen and (max-width: 520px) {
   header {
     height: 8rem;
   }
+
   .header_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
   }
+
   .header_logo {
     align-self: center;
   }
+
   .header_search {
     display: grid;
     grid-template-columns: 100px 100px;
     gap: 4rem;
   }
+
   .item-list {
     grid-template-columns: repeat(2, 1fr);
     height: 35rem;
@@ -243,24 +291,29 @@ footer {
   .footer {
     height: 50rem;
   }
+
   .footer-container {
     grid-template-columns: 1fr;
   }
 }
+
+/* Medium screens: between 520px and 700px */
 @media screen and (min-width: 520px) and (max-width: 700px) {
-  .header_wrapper{
+  .header_wrapper {
     width: 80%;
   }
-  .item-list{
+
+  .item-list {
     height: 20rem;
-     grid-template-columns: repeat(3, 1fr);
-  }
-  .lower-banner{
-    height: 25rem;
-  }
-  .con{
     grid-template-columns: repeat(3, 1fr);
-
   }
 
+  .lower-banner {
+    height: 30rem;
+  }
+
+  .con {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
 }
