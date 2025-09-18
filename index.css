@@ -315,5 +315,14 @@ footer {
   .con {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+@media screen and (min-width: 1000px) {
+  .discount-banner {
+    height: 13rem;
+  }
+  .mid-banner {
+  height: 15rem;
   
+}
 }
