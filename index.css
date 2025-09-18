@@ -322,7 +322,18 @@ footer {
     height: 13rem;
   }
   .mid-banner {
-  height: 15rem;
-  
+    height: 15rem;
+  }
 }
+
+@media screen and (min-width: 1200px) {
+  .discount-banner {
+    height: 16rem;
+  }
+  .mid-banner {
+    height: 18rem;
+  }
+  .lower-banner {
+    height: 18rem;
+  }
 }
